@@ -8,8 +8,10 @@ This plugin is based on Python and scikit-learn, while scikit-learn depends on N
 To install scikit-learn on your machine, you could follow instructions on this link: [installing scikit-learn](http://scikit-learn.org/stable/install.html).
 #### It is highly recommended to install scikit-learn via a python bundle, these come with all required libraries, such as: [Python(x,y)](http://python-xy.github.io/), [Anaconda](https://www.continuum.io/downloads) and [Canopy](https://www.enthought.com/products/canopy/)
 On the other hand, this plugin (in the present time) has been tested in Windows environment with python 2.7. If you are using earlier of latter versions, we highly recommend that you kindly submit any bug appears. 
-### Licence
+
+## Licence
 Copyright (c) 2017, Mahmoud AbdelRahman <arch.mahmoud.ouf111@gmail.com>
+
 http://www.m-ouf.com/
 All rights reserved.
 

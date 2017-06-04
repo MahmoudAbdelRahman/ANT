@@ -10,9 +10,8 @@ To install scikit-learn on your machine, you could follow instructions on this l
 On the other hand, this plugin (in the present time) has been tested in Windows environment with python 2.7. If you are using earlier of latter versions, we highly recommend that you kindly submit any bug appears. 
 
 ## Licence
-Copyright (c) 2017, Mahmoud AbdelRahman <arch.mahmoud.ouf111@gmail.com>
-
-http://www.m-ouf.com/
+Copyright (c) 2017, Mahmoud AbdelRahman <arch.mahmoud.ouf111@gmail.com> //
+http://www.m-ouf.com/ //
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

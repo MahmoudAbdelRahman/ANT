@@ -1,0 +1,4 @@
+@ECHO OFF
+Echo. Please wait while we initialize every thing.... 
+cd\ C:\ant\init
+python init.py

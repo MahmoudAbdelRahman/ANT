@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug64</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{233EE191-32DF-47B3-8DE5-022DF7CC18FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ANT</RootNamespace>
+    <AssemblyName>ant</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="RhinoCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Rhinoceros 5 (64-bit)\System\RhinoCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.75.0\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GH_IO">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.75.0\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01_DataSets\_0_BostonDataset.cs" />
+    <Compile Include="01_DataSets\_0_IrisDataset.cs" />
+    <Compile Include="03_LinearModels\_03_BayesianRegression.cs" />
+    <Compile Include="03_LinearModels\_03_ElasticNet.cs" />
+    <Compile Include="03_LinearModels\_03_Lars.cs" />
+    <Compile Include="03_LinearModels\_03_Lasso.cs" />
+    <Compile Include="03_LinearModels\_03_LassoLars.cs" />
+    <Compile Include="03_LinearModels\_03_LinearRegression.cs" />
+    <Compile Include="03_LinearModels\_03_LogisticRegression.cs" />
+    <Compile Include="03_LinearModels\_03_OrthogonalMatchingPursuit.cs" />
+    <Compile Include="04_SVM\_04_ٍSupportVectorClassifier.cs" />
+    <Compile Include="05_SGD\_03_StochasticGradientDescentClassifier.cs" />
+    <Compile Include="05_SGD\_03_StochasticGradientDescentRegression.cs" />
+    <Compile Include="antComponent.cs" />
+    <Compile Include="antInfo.cs" />
+    <Compile Include="HelperFunction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="01_DataSets\_0_CsvDataset.cs" />
+    <Compile Include="01_DataSets\_0_OpenFile.cs" />
+    <Compile Include="01_DataSets\_0_ExcelDataSet.cs" />
+    <Compile Include="Resources\allResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>allResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scikit_Learn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\allResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LastGenOutput>allResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\exceldataset.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\boston.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\csv-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\datasets\boston_dataset.txt" />
+    <Content Include="Resources\datasets\csvDataset.txt" />
+    <Content Include="Resources\_04_SVM\supportVectorClassifier.txt" />
+    <None Include="Resources\ExcelDataset.txt" />
+    <Content Include="Resources\datasets\ExcelDataset.txt" />
+    <Content Include="Resources\datasets\irisdataset.txt" />
+    <Content Include="Resources\init\00_init.txt" />
+    <None Include="Resources\iris_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaddataicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_Bays_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_lasso_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linearreg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_LARS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_LASSO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_BayesianRegression.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LASSO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_lasso_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_lasso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_lasso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_lars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_Bayes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_ElasticNet.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_ElasticNet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_ElasticNet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_LassoLars.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_LarsLasso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_orthogonalMatchingPursuit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_LinearRegression" />
+    <None Include="Resources\_03_OrthogonalMatchingPursuit.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_LogisticRegression.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scikit-learn-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\_03_LogisticRegression.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_StochasticGradientDescentClassifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_StochasticGradientDescentRegressor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_icon_StochasticGradientDescentC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_05_SGDClassifier.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_05_SGDRegressor.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03_SupportVectorClassify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="06_NearestNeighbors\" />
+    <Folder Include="Resources\icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_03_LinearRegression.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\init\init.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhinoceros 5 (64-bit)\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+</Project>

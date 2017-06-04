@@ -1,0 +1,46 @@
+﻿directory = "##directory##"
+f = open(directory + "bostonDatasetLog.txt", 'w')
+try:
+    from sklearn.datasets import load_boston
+    f.write("Boston dataSet successfully loaded \n ")
+except Exception(e):
+    f.write(str(e) + " \n ")
+
+def write_data(directory, filename, data):
+    newf = open(directory+filename, 'w')
+    newf.write(data)
+    newf.close()
+
+import pickle
+    
+bos = load_boston()
+
+write_data(directory,"data.txt", pickle.dumps(bos.data))
+write_data(directory, "targets.txt", pickle.dumps(bos.target))
+write_data(directory, "feature_names.txt", pickle.dumps(bos.feature_names))
+
+write_data(directory,"bostondata_r.txt", str(bos.data))
+write_data(directory, "bostontargets_r.txt", str(bos.target))
+write_data(directory, "feature_names_r.txt", str(bos.feature_names))
+
+
+x, y, z, a = bos.items()
+
+print x[1][0]
+f.write("- ----------------------------------  \n ")
+f.write("SAMPLES :: \n ")
+f.write(str(x[1]))
+f.write("\n  - ----------------------------------  \n ")
+f.write("TARGETS :: \n ")
+f.write(str(y[1:]))
+f.write("\n  - ----------------------------------  \n ")
+f.write("BOSTON DATA SHAPE :: \n ")
+f.write(str(bos.data.shape))
+f.write("\n  - ----------------------------------  \n ")
+f.write("BOSTON TARGET SHAPE :: \n ")
+f.write(str(bos.target.shape))
+f.write("\nBOSTON DESCRIPTON :: \n ")
+f.write(bos.DESCR)
+print bos.DESCR
+f.close()
+

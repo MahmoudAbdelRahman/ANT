@@ -1,0 +1,86 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 04 05:14:23 2017
+
+@author: gamma
+varialbles : 
+##workingDir##
+##logFile##
+##resFile##
+##dataFile##
+##targetFile##
+##predictData##
+
+	support = clf.support_
+	supportVector = clf.support_vectors_
+	nSupport = clf.n_support_
+	dualCoef = clf.dual_coef_
+	
+"""
+workingDir = "##workingDir##"
+logFile = "##logFile##"
+resFile = workingDir+"##resFile##"
+
+
+xmlFile = workingDir+"res.xml"
+isDump = True
+
+log_file =open(logFile, 'w') 
+
+try:
+    from sklearn.linear_model import Lars
+    import pickle
+    import xml.etree.cElementTree as ET
+except:
+    log_file.write("error loading SVM module.. make sure you have installed sklearn properly. .. ")
+
+if(isDump):
+    dataFile = open("##dataFile##", 'r')
+    X = pickle.loads(dataFile.read())
+    targetFile = open("##targetFile##", 'r')
+    y = pickle.loads(targetFile.read())
+else:
+    dataFile = open("##dataFile##", 'r')
+    X = dataFile.read()
+    targetFile = open("##targetFile##", 'r')
+    y = targetFile.read()
+    
+
+model = Lars()
+model.fit(X, y)
+try:
+    #TODO: Assign variables. 
+    result = model.predict(PredictData)
+    score = model.score(X, y)
+    alphas = model.alphas_
+    active = model.active_
+    coef_path= model.coef_path_
+    coeff = model.coef_
+    intercept = model.intercept_
+    #n_inter = model.n_iter_
+
+
+    #TODO: write results into an Xml file
+    root = ET.Element("result")
+    
+    Xmlpredict = ET.SubElement(root, "prediction").text = str(result)
+    Xmlscore = ET.SubElement(root, "score").text = str(score)
+    Xmlalphas = ET.SubElement(root, "alphas").text = str(alphas)
+    Xmlactive = ET.SubElement(root, "active").text = str(active)
+    Xmlcoef_path = ET.SubElement(root, "coef_path").text = str(coef_path)
+    Xmlcoeff = ET.SubElement(root, "coeff").text = str(coeff)
+    Xmlintercept = ET.SubElement(root, "intercept").text = str(intercept)
+    #Xmln_inter = ET.SubElement(root, "n_inter").text = str(n_inter)
+    
+    
+    
+    tree = ET.ElementTree(root)
+    tree.write(xmlFile)
+	
+except Exception as e:
+    log_file.write("Error : There is a problem in predicting Data, Make sure you typed the data correctly\n")
+    log_file.write(str(e) + "\n")
+log_file.write(error)
+
+
+log_file.close()

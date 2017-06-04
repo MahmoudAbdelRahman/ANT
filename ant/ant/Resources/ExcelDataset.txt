@@ -1,0 +1,25 @@
+﻿directory = ##directory##
+try:
+    import numpy as np
+    import matplotlib.pyplot as plt
+except:
+    pass
+
+def write_data(directory, filename, data):
+    newf = open(directory+filename, 'w')
+    newf.write(data)
+    newf.close()
+
+import pickle
+    
+data = ##data##
+target = ##target##
+features = ##features##
+
+write_data(directory,"data.txt", pickle.dumps(data))
+write_data(directory, "targets.txt", pickle.dumps(target))
+write_data(directory, "feature_names.txt", pickle.dumps(features))
+
+write_data(directory,"data_r.txt", str(data))
+write_data(directory, "targets_r.txt", str(target))
+write_data(directory, "feature_names_r.txt", str(features))

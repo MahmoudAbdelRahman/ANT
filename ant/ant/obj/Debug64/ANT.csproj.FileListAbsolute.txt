@@ -1,0 +1,10 @@
+c:\users\gamma\documents\visual studio 2013\Projects\ant\ant\bin\ant.dll
+c:\users\gamma\documents\visual studio 2013\Projects\ant\ant\bin\ant.pdb
+c:\users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ant.dll
+c:\users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ant.pdb
+C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ant.g.resources
+C:\Users\gamma\Documents\Visual Studio 2013\Projects\ant\ant\obj\Debug64\ANT.csproj.GenerateResource.Cache
+C:\Users\gamma\Documents\Visual Studio 2013\Projects\ant\ant\obj\Debug64\ANT.Resources.allResources.resources
+C:\Users\gamma\Documents\Visual Studio 2013\Projects\ant\ant\bin\Resources\allResources.resx
+C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\bin\ant.dll.CodeAnalysisLog.xml
+C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\bin\ant.dll.lastcodeanalysissucceeded

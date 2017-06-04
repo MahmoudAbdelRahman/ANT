@@ -1,0 +1,22 @@
+f = open("C:\\ant\\init\\errorlog.txt", 'w')
+
+try:
+	import numpy as np
+	f.write("01 - numpy has been initiated as np \n")
+except Exception(e):
+	f.write(str(e)+"\n")
+	
+try:
+	import scipy 
+	f.write("03 - scipy has been initaited\n")
+except:
+	f.write("03 - There has been a problem initiating scipy .. \n")
+
+try:
+	import sklearn
+	f.write("04 - sklearn has been initiated.. \n")
+except:
+	f = open("C:\\ant\\init\\errorlog.txt", 'w')
+	f.write("04 - error: sklearn hasn't been initiated...\n")
+
+f.close()

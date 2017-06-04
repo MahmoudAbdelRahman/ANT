@@ -1,0 +1,77 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 04 05:14:23 2017
+LASSO 
+@author: Mahmoud M. Abderlrahman
+varialbles : 
+##workingDir##
+##logFile##
+##resFile##
+##dataFile##
+##targetFile##
+##predictData##
+
+	support = clf.support_
+	supportVector = clf.support_vectors_
+	nSupport = clf.n_support_
+	dualCoef = clf.dual_coef_
+	
+"""
+workingDir = "##workingDir##"
+logFile = "##logFile##"
+resFile = workingDir+"##resFile##"
+
+
+xmlFile = workingDir+"res.xml"
+isDump = True
+
+log_file =open(logFile, 'w') 
+
+try:
+    from sklearn.linear_model import Lasso
+    import pickle
+    import xml.etree.cElementTree as ET
+except:
+    log_file.write("error loading SVM module.. make sure you have installed sklearn properly. .. ")
+
+if(isDump):
+    dataFile = open("##dataFile##", 'r')
+    X = pickle.loads(dataFile.read())
+    targetFile = open("##targetFile##", 'r')
+    y = pickle.loads(targetFile.read())
+else:
+    dataFile = open("##dataFile##", 'r')
+    X = dataFile.read()
+    targetFile = open("##targetFile##", 'r')
+    y = targetFile.read()
+    
+
+model = Lasso()
+model.fit(X, y)
+try:
+    #TODO: Assign variables. 
+    result = model.predict(PredictData)
+    score = model.score(X, y)
+    sparse_coef= model.sparse_coef_
+    coeff = model.coef_
+    intercept = model.intercept_
+
+    #TODO: write results into an Xml file
+    root = ET.Element("result")
+    
+    Xmlpredict = ET.SubElement(root, "prediction").text = str(result)
+    Xmlscore = ET.SubElement(root, "score").text = str(score)
+    Xmlsparse_coef = ET.SubElement(root, "sparse_coef").text = str(sparse_coef)
+    Xmlcoeff = ET.SubElement(root, "coeff").text = str(coeff)
+    Xmlintercept = ET.SubElement(root, "intercept").text = str(intercept)
+    
+    tree = ET.ElementTree(root)
+    tree.write(xmlFile)
+	
+except Exception as e:
+    log_file.write("Error : There is a problem in predicting Data, Make sure you typed the data correctly\n")
+    log_file.write(str(e) + "\n")
+log_file.write(error)
+
+
+log_file.close()

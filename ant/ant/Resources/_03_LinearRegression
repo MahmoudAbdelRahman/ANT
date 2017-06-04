@@ -1,0 +1,97 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 04 05:14:23 2017
+
+@author: gamma
+varialbles : 
+##workingDir##
+##logFile##
+##resFile##
+##dataFile##
+##targetFile##
+##predictData##
+
+	support = clf.support_
+	supportVector = clf.support_vectors_
+	nSupport = clf.n_support_
+	dualCoef = clf.dual_coef_
+	
+"""
+workingDir = "##workingDir##"
+logFile = "##logFile##"
+resFile = workingDir+"##resFile##"
+
+#supportFile = workingDir+"support.txt"
+#supportVectorFile = workingDir+"supportvector.txt"
+#nSupportFile = workingDir+"nsuppport.txt"
+#dualCoefFile = workingDir+"dualcoef.txt"
+xmlFile = workingDir+"res.xml"
+isDump = True
+
+log_file =open(logFile, 'w') 
+resultFile = open(resFile, 'w')
+#TODO ... WRITE YOUR OWN ATTRIBUTES 
+#supportFile_ = open(supportFile, 'w')
+#supportVectorFile_ = open(supportVectorFile, 'w')
+#nSupportFile_ = open(nSupportFile, 'w')
+#dualCoefFile_ = open(dualCoefFile, 'w')
+
+try:
+    from sklearn.linear_model import LinearRegression
+    import pickle
+    import xml.etree.cElementTree as ET
+except:
+    log_file.write("error loading SVM module.. make sure you have installed sklearn properly. .. ")
+
+if(isDump):
+    dataFile = open("##dataFile##", 'r')
+    X = pickle.loads(dataFile.read())
+    targetFile = open("##targetFile##", 'r')
+    y = pickle.loads(targetFile.read())
+else:
+    dataFile = open("##dataFile##", 'r')
+    X = dataFile.read()
+    targetFile = open("##targetFile##", 'r')
+    y = targetFile.read()
+    
+
+model = LinearRegression(normalize = True)
+model.fit(X, y)
+try:
+    #TODO: Assign variables. 
+    result = model.predict(PredictData)
+    score = model.score(X, y)
+    coeff = model.coef_
+    intercept = model.intercept_
+    #support = model.support_
+    #supportVector = model.support_vectors_
+    #nSupport = model.n_support_
+    #dualCoef = model.dual_coef_
+    #coEff = model.coef_ 
+
+    #resultFile.write(str(result)+"\n")
+    #supportFile_.write(str(support)+"\n")
+    #supportVectorFile_.write(str(supportVector)+"\n")
+    #nSupportFile_.write(str(nSupport)+"\n")
+    #dualCoefFile_.write(str(dualCoef)+"\n")
+    #resultFile.write(str(coEff)+"\n")
+    #TODO: write results into an Xml file
+    root = ET.Element("result")
+    Xmlpredict = ET.SubElement(root, "prediction").text = str(result)
+    Xmlscore = ET.SubElement(root, "score").text = str(score)
+    Xmlcoeff = ET.SubElement(root, "coeff").text = str(coeff)
+    Xmlintercept = ET.SubElement(root, "intercept").text = str(intercept)
+    tree = ET.ElementTree(root)
+    tree.write(xmlFile)
+	
+except Exception as e:
+    log_file.write("Error : There is a problem in predicting Data, Make sure you typed the data correctly\n")
+    log_file.write(str(e) + "\n")
+log_file.write(error)
+
+resultFile.close()
+#supportFile_.close()
+#supportVectorFile_.close()
+#nSupportFile_.close()
+#dualCoefFile_.close()
+log_file.close()

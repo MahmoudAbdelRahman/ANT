@@ -1,0 +1,10 @@
+Here is a list of tasks to be finished for the upcoming release: 
+Adding the following components: 
+- [x] Support Vector Machine.
+- [] Nearest Neighbors.
+- [] Naive Bayes
+- [] Decision Trees
+- [] Random Forests
+- [] Neural Network
+- [] Gaussian Processes
+- [] AdaBoost

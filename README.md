@@ -10,6 +10,11 @@ This plugin is based on Python and scikit-learn, while scikit-learn depends on N
 To install scikit-learn on your machine, you could follow instructions on this link: [installing scikit-learn](http://scikit-learn.org/stable/install.html).
 
 #### To install scikit-learn, It is highly recommended that you do this via python bundle, this comes with all required libraries, such as: [Python(x,y)](http://python-xy.github.io/), [Anaconda](https://www.continuum.io/downloads) and [Canopy](https://www.enthought.com/products/canopy/)
+
+After installing Python, numPy, SciPy, matplotlib and scikit-learn, Open grasshopper and drag and drop ANT.gha into grasshopper canvas, you will notice a new tap "ANT" has appeared. Then, initiate ANT component to make sure everything is working properly.
+
+![plugnplay](https://cloud.githubusercontent.com/assets/6969514/26765670/03332d34-4981-11e7-9778-d209cf9b3bcd.jpg)
+
 On the other hand, this plugin (in the present time) has been tested in Windows environment with python 2.7. If you are using earlier of latter versions, we highly recommend that you kindly submit any bug appears. 
 
 ## Licence

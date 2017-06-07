@@ -434,6 +434,29 @@ namespace ANT.Resources {
         ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
         ///&quot;&quot;&quot;
         ///Created on Tue Apr 04 05:14:23 2017
+        ///linearSupportVectorClassification 
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
+        ///
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
+        ///
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    mod [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string _04_LinearSupportVectorClassifier {
+            get {
+                return ResourceManager.GetString("_04_LinearSupportVectorClassifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
+        ///&quot;&quot;&quot;
+        ///Created on Tue Apr 04 05:14:23 2017
         ///Logistic Regression 
         /// 
         ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
@@ -760,6 +783,16 @@ namespace ANT.Resources {
         public static System.Drawing.Bitmap linearreg {
             get {
                 object obj = ResourceManager.GetObject("linearreg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap LinearSVC {
+            get {
+                object obj = ResourceManager.GetObject("LinearSVC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

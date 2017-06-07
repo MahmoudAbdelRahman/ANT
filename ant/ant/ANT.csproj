@@ -72,6 +72,7 @@
     <Compile Include="03_LinearModels\_03_LinearRegression.cs" />
     <Compile Include="03_LinearModels\_03_LogisticRegression.cs" />
     <Compile Include="03_LinearModels\_03_OrthogonalMatchingPursuit.cs" />
+    <Compile Include="04_SVM\_04_LinearSupportVectorClassification.cs" />
     <Compile Include="04_SVM\_04_NuSupportVectorClassification.cs" />
     <Compile Include="04_SVM\_04_ٍSupportVectorClassifier.cs" />
     <Compile Include="05_SGD\_03_StochasticGradientDescentClassifier.cs" />
@@ -116,7 +117,9 @@
     <Content Include="Resources\datasets\boston_dataset.txt" />
     <Content Include="Resources\datasets\csvDataset.txt" />
     <Content Include="Resources\icons\04_NuSVC.png" />
+    <Content Include="Resources\icons\LinearSVC.png" />
     <Content Include="Resources\_04_SVM\supportVectorClassifier.txt" />
+    <Content Include="Resources\_04_SVM\_04_LinearSupportVectorClassifier.txt" />
     <Content Include="Resources\_04_SVM\_04_NuSupportVectorClassification.txt" />
     <None Include="Resources\ExcelDataset.txt" />
     <Content Include="Resources\datasets\ExcelDataset.txt" />

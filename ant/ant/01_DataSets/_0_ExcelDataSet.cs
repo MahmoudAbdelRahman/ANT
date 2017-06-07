@@ -52,8 +52,6 @@ namespace ANT
         System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
         System.Diagnostics.Process process2 = new System.Diagnostics.Process();
 
-        System.IO.Stream myStream = null;
-
 
         /// <summary>
         /// Initializes a new instance of the _0_ExcelDataSet class.

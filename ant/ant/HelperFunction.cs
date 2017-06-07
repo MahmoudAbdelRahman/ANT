@@ -105,6 +105,24 @@ namespace ANT
 
             return newString;
         }
+
+        public string[] SetDefulatValues(Object[,] vars)
+        {
+            string[] temp = new string[vars.Length];
+            for (int i = 0; i < vars.Length; i++)
+            {
+                if ((string)vars[i, 1] == "b")
+                {
+                    temp[i] = (Convert.ToBoolean(vars[i, 2]) == true ? "True" : "False");
+                }
+                else
+                {
+                    temp[i] = (vars[i, 2].ToString());
+                }
+            }
+            return temp;
+        }
+
     }
 
 }

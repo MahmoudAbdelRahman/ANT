@@ -1,0 +1,130 @@
+﻿# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 04 05:14:23 2017
+Logistic Regression 
+ 
+@author: Mahmoud M. Abderlrahman <arch.mahmoud.ouf111@gmail.com>
+under BSD simplified Licence
+[ANT] A machine learning plugin for Rhino\Grasshopper 
+    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
+
+    Copyright (c) 2017, Mahmoud AbdelRahman <arch.mahmoud.ouf111@gmail.com>
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright notice, this
+      list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation
+      and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+    CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+varialbles : 
+##workingDir##
+##logFile##
+##resFile##
+##dataFile##
+##targetFile##
+##predictData##
+"""
+workingDir = "##workingDir##"
+logFile = "##logFile##"
+resFile = workingDir+"##resFile##"
+
+
+
+isDump = True
+
+log_file =open(logFile, 'w') 
+
+try:
+    from sklearn.svm import NuSVC
+    import pickle
+    import xml.etree.cElementTree as ET
+except Exception as e:
+    log_file.write(str(e) + "\n")
+
+if(isDump):
+    dataFile = open("##dataFile##", 'r')
+    X = pickle.loads(dataFile.read())
+    targetFile = open("##targetFile##", 'r')
+    y = pickle.loads(targetFile.read())
+else:
+    dataFile = open("##dataFile##", 'r')
+    X = dataFile.read()
+    targetFile = open("##targetFile##", 'r')
+    y = targetFile.read()
+    
+
+model = NuSVC()
+model.fit(X, y)
+
+def writeXMLFile(data, workingDir):
+    '''
+    data is a dictionary consists of variables and their names.
+    workingDir : is the directory at which data should be written
+    '''
+    xmlFile = workingDir+"res.xml"
+    root = ET.Element("result")
+    Xmlpredict = ET.SubElement(root, "prediction").text = str(result)
+    for key, value in data.iteritems():   
+        ET.SubElement(root, str(key)).text = str(value)
+    tree = ET.ElementTree(root)
+    tree.write(xmlFile)
+    
+    
+#TODO: Assign all variables. 
+try:
+    model.nu = ##data0##
+    model.kernel = ##data1##
+    model.degree= ##data2##
+    model.gamma= ##data3##
+    model.coef0= ##data4##
+    model.probability= ##data5##
+    model.shrinking = ##data6##
+    model.tol = ##data7##
+    model.cache_size= ##data8##
+    model.verbose= ##data9##
+    model.max_iter= ##data10##
+    model.random_state= ##data11##
+except Exception as e:
+    log_file.write(str(e)+"\n")
+
+try:
+    #TODO: get results . 
+    result = model.predict(PredictData)
+    score = model.score(X,y)
+    support = model.support_
+    support_vectors = model.support_vectors_
+    n_support = model.n_support_
+    dual_coef = model.dual_coef_
+    
+    if(model.kernel == "linear"):
+        coeff = model.coef_
+    else:
+        coeff = "This value is only available for linear kernel, the current kernel is: " + str(model.kernel)
+    intercept = model.intercept_
+
+    #TODO: write results as dictionary of {"key1": value1, "key2": value2}
+    allData = {"prediction":result, "score":score, "support":support, "support_vectors":support_vectors, "n_support": n_support, "dual_coef": dual_coef, "coef": coeff, "intercept":intercept}
+    writeXMLFile(allData, workingDir)
+
+except Exception as e:
+    log_file.write("Error : There is a problem in predicting Data, Make sure you typed the data correctly\n")
+    log_file.write(str(e) + "\n")
+log_file.write(error)
+
+log_file.close()

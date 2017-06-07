@@ -355,29 +355,18 @@ namespace ANT.Resources {
         ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
         ///&quot;&quot;&quot;
         ///Created on Tue Apr 04 05:14:23 2017
+        ///Linear Regression
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
         ///
-        ///@author: gamma
-        ///varialbles : 
-        ///##workingDir##
-        ///##logFile##
-        ///##resFile##
-        ///##dataFile##
-        ///##targetFile##
-        ///##predictData##
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
         ///
-        ///	support = clf.support_
-        ///	supportVector = clf.support_vectors_
-        ///	nSupport = clf.n_support_
-        ///	dualCoef = clf.dual_coef_
-        ///	
-        ///&quot;&quot;&quot;
-        ///workingDir = &quot;##workingDir##&quot;
-        ///logFile = &quot;##logFile##&quot;
-        ///resFile = workingDir+&quot;##resFile##&quot;
-        ///
-        ///#supportFile = workingDir+&quot;support.txt&quot;
-        ///#supportVectorFile = workingDir+&quot;supportvector.txt&quot;
-        ///#nSup [rest of string was truncated]&quot;;.
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modification, are pe [rest of string was truncated]&quot;;.
         /// </summary>
         public static string _03_LinearRegression {
             get {
@@ -412,30 +401,18 @@ namespace ANT.Resources {
         ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
         ///&quot;&quot;&quot;
         ///Created on Tue Apr 04 05:14:23 2017
-        ///LASSO 
-        ///@author: Mahmoud M. Abderlrahman
-        ///varialbles : 
-        ///##workingDir##
-        ///##logFile##
-        ///##resFile##
-        ///##dataFile##
-        ///##targetFile##
-        ///##predictData##	
-        ///&quot;&quot;&quot;
-        ///workingDir = &quot;##workingDir##&quot;
-        ///logFile = &quot;##logFile##&quot;
-        ///resFile = workingDir+&quot;##resFile##&quot;
+        ///Orthogonal Matching Pursuit
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
         ///
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
         ///
-        ///xmlFile = workingDir+&quot;res.xml&quot;
-        ///isDump = True
-        ///
-        ///log_file =open(logFile, &apos;w&apos;) 
-        ///
-        ///try:
-        ///    from sklearn.linear_model import OrthogonalMatchingPursuit
-        ///    import pickle
-        ///    import xml.etree.cElem [rest of string was truncated]&quot;;.
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modificati [rest of string was truncated]&quot;;.
         /// </summary>
         public static string _03_OrthogonalMatchingPursuit {
             get {
@@ -449,6 +426,39 @@ namespace ANT.Resources {
         public static System.Drawing.Bitmap _03_SupportVectorClassify {
             get {
                 object obj = ResourceManager.GetObject("_03_SupportVectorClassify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
+        ///&quot;&quot;&quot;
+        ///Created on Tue Apr 04 05:14:23 2017
+        ///Logistic Regression 
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
+        ///
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
+        ///
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modification, are [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string _04_NuSupportVectorClassification {
+            get {
+                return ResourceManager.GetString("_04_NuSupportVectorClassification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _04_NuSVC {
+            get {
+                object obj = ResourceManager.GetObject("_04_NuSVC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -788,29 +798,18 @@ namespace ANT.Resources {
         ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
         ///&quot;&quot;&quot;
         ///Created on Tue Apr 04 05:14:23 2017
+        ///Logistic Regression 
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
         ///
-        ///@author: Mahmoud Abdlerahman 2017
-        ///varialbles : 
-        ///##workingDir##
-        ///##logFile##
-        ///##resFile##
-        ///##dataFile##
-        ///##targetFile##
-        ///##predictData##
-        ///&quot;&quot;&quot;
-        ///workingDir = &quot;##workingDir##&quot;
-        ///logFile = &quot;##logFile##&quot;
-        ///resFile = workingDir+&quot;##resFile##&quot;
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
         ///
-        ///isDump = ##DumpToggle##
-        ///
-        ///newfile =open(workingDir+logFile, &apos;w&apos;) 
-        ///resultFile = open(workingDir+resFile, &apos;w&apos;)
-        ///try:
-        ///    from sklearn import svm
-        ///    import pickle
-        ///except:
-        ///    newfile.write(&quot;error loadi [rest of string was truncated]&quot;;.
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modification, are [rest of string was truncated]&quot;;.
         /// </summary>
         public static string supportVectorClassifier {
             get {

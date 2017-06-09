@@ -6,3 +6,4 @@ C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ANT.Res
 C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ANT.csproj.GenerateResource.Cache
 C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ant.dll
 C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ant.pdb
+C:\Users\gamma\documents\visual studio 2013\Projects\ant\ant\obj\Debug64\ANT.csprojResolveAssemblyReference.cache

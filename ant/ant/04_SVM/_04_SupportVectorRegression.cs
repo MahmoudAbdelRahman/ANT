@@ -7,12 +7,14 @@ using System.Xml;
 using System.Diagnostics;
 using ANT.Resources;
 
-
-
 namespace ANT._04_SVM
 {
-    public class _04_LinearSupportVectorClassification : GH_Component
+    public class _04_SupportVectorRegression : GH_Component
     {
+        string VersionDate = "9-6-2017"+"\n";
+        string Version = "0.1alpha" + "\n";
+        string CompName = "SupportVectorRegression" + "\n"; 
+
         // this handles exiting pyton file event. 
         private bool processhasexit = false;
 
@@ -33,15 +35,15 @@ namespace ANT._04_SVM
         
 
         /// <summary>
-        /// Initializes a new instance of the _04_LinearSupportVectorClassification class.
+        /// Initializes a new instance of the _04_SupportVectorRegression class.
         /// </summary>
-        public _04_LinearSupportVectorClassification()
-            : base("_04_LinearSupportVectorClassification", "",
+        public _04_SupportVectorRegression()
+            : base("_04_SupportVectorRegression", "SVR",
                 "",
                 "ANT", "4|SVM")
         {
-            this.Message = "";
-            this.Description = "Similar to SVC but uses a parameter to control the number of support vectors.\nThe implementation is based on libsvm.";
+            this.Message = CompName + "V "+Version + VersionDate;
+            this.Description = "";
 
             //initiating the process which runs the Python file. 
             process2.StartInfo.FileName = "doAllWork.py";
@@ -59,36 +61,37 @@ namespace ANT._04_SVM
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
 
+
             Indocs = new string[]{
                 "C : float, optional (default=1.0)\nPenalty parameter C of the error term."
-                ,"loss : string, ‘hinge’ or ‘squared_hinge’ (default=’squared_hinge’)\nSpecifies the loss function. ‘hinge’ is the standard SVM loss (used e.g. by the SVC class) while ‘squared_hinge’ is the square of the hinge loss."
-                ,"penalty : string, ‘l1’ or ‘l2’ (default=’l2’)\nSpecifies the norm used in the penalization. The ‘l2’ penalty is the standard used in SVC. The ‘l1’ leads to coef_ vectors that are sparse."
-                ,"dual : bool, (default=True)\nSelect the algorithm to either solve the dual or primal optimization problem. Prefer dual=False when n_samples > n_features."
-                ,"tol : float, optional (default=1e-4)\nTolerance for stopping criteria."
-                ,"multi_class: string, ‘ovr’ or ‘crammer_singer’ (default=’ovr’) :\nDetermines the multi-class strategy if y contains more than two classes. ovr trains n_classes one-vs-rest classifiers, while crammer_singer optimizes a joint objective over all classes. While crammer_singer is interesting from an theoretical perspective as it is consistent it is seldom used in practice and rarely leads to better accuracy and is more expensive to compute. If crammer_singer is chosen, the options loss, penalty and dual will be ignored."
-                ,"fit_intercept : boolean, optional (default=True)\nWhether to calculate the intercept for this model. If set to false, no intercept will be used in calculations (e.g. data is expected to be already centered)."
-                ,"intercept_scaling : float, optional (default=1)\nWhen self.fit_intercept is True, instance vector x becomes [x, self.intercept_scaling], i.e. a “synthetic” feature with constant value equals to intercept_scaling is appended to the instance vector. The intercept becomes intercept_scaling * synthetic feature weight Note! the synthetic feature weight is subject to l1/l2 regularization as all other features. To lessen the effect of regularization on synthetic feature weight (and therefore on the intercept) intercept_scaling has to be increased"
-                ,"class_weight : {dict, ‘auto’}, optional\nSet the parameter C of class i to class_weight[i]*C for SVC. If not given, all classes are supposed to have weight one. The ‘auto’ mode uses the values of y to automatically adjust weights inversely proportional to class frequencies."
-                ,"verbose : int, (default=0)\nEnable verbose output. Note that this setting takes advantage of a per-process runtime setting in liblinear that, if enabled, may not work properly in a multithreaded context."
-                ,"random_state : int seed, RandomState instance, or None (default=None)\nThe seed of the pseudo random number generator to use when shuffling the data."
-                ,"max_iter : int, (default=1000)\nThe maximum number of iterations to be run."
+                ,"epsilon : float, optional (default=0.1)\nEpsilon in the epsilon-SVR model. It specifies the epsilon-tube within which no penalty is associated in the training loss function with points predicted within a distance epsilon from the actual value"
+                ,"kernel : string, optional (default=’rbf’)\nSpecifies the kernel type to be used in the algorithm. It must be one of ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a callable. If none is given, ‘rbf’ will be used. If a callable is given it is used to precompute the kernel matrix."
+                ,"degree : int, optional (default=3)\nDegree of kernel function is significant only in poly, rbf, sigmoid."
+                ,"gamma : float, optional (default=0.0)\nKernel coefficient for rbf and poly, if gamma is 0.0 then 1/n_features will be taken."
+                ,"coef0 : float, optional (default=0.0)\nindependent term in kernel function. It is only significant in poly/sigmoid."
+                ,"shrinking: boolean, optional (default=True) :\nWhether to use the shrinking heuristic."
+                ,"tol : float, optional (default=1e-3)\nTolerance for stopping criterion."
+                ,"cache_size : float, optional\nSpecify the size of the kernel cache (in MB)."
+                ,"verbose : bool, default: False\nEnable verbose output. Note that this setting takes advantage of a per-process runtime setting in libsvm that, if enabled, may not work properly in a multithreaded context."
+                ,"max_iter : int, optional (default=-1)\nHard limit on iterations within solver, or -1 for no limit."
             };
-
+            
+            // Input Variables : {"variableName", "VaribaleType 's', 'b','f', 'i'", defaultValue}
             Invars = new Object[,] {
                 {"C", "f",1.0 },
-                {"loss", "s" ,"squared_hinge" },
-                {"penalty","s", "l1" },
-                {"dual", "b", true},
-                {"tol", "f", 0.00001},
-                {"multi_class", "s" , "ovr" },
-                {"fit_intercept", "b", true},
-                {"intercept_scaling","f", 1.0},
-                {"class_weight","s", "auto"},
-                {"verbose", "i", 0},
-                {"random_state","s", "None"},
-                {"max_iter", "i", 1000}};
+                {"epsilon", "f" ,1.0 },
+                {"kernel", "s" ,"rbf"},
+                {"degree","i", 3 },
+                {"gamma", "f", 0.0},
+                {"coef0", "f", 0.0},
+                {"shrinking", "b" , true },
+                {"tol", "f", 1e-3},
+                {"cache_size","f", 200},
+                {"verbose","b", false},
+                {"max_iter", "i", -1}};
 
             initInputParams(Indocs, Invars, pManager);
+
         }
 
         /// <summary>
@@ -96,11 +99,15 @@ namespace ANT._04_SVM
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            Outvars = new string[] { "coef_", "intercept_" };
-             OutDocs = new string[] {
-                 "coef_ : array, shape = [n_features] if n_classes == 2 else [n_classes, n_features]\nWeights assigned to the features (coefficients in the primal problem). This is only available in the case of linear kernel.\ncoef_ is a readonly property derived from raw_coef_ that follows the internal memory layout of liblinear.",
-                 "intercept_ : array, shape = [1] if n_classes == 2 else [n_classes]\nConstants in decision function."};
-             initOutputParams(OutDocs, Outvars, pManager);
+            Outvars = new string[] { "support_", "support_vectors_", "dual_coef_", "coef_", "intercept_" };
+            OutDocs = new string[] {
+                "support_ : array-like, shape = [n_SV]\nIndices of support vectors."
+                ,"support_vectors_ : array-like, shape = [nSV, n_features]\nSupport vectors."
+                ,"dual_coef_ : array, shape = [1, n_SV]\nCoefficients of the support vector in the decision function."
+                ,"coef_ : array, shape = [1, n_features]\nWeights assigned to the features (coefficients in the primal problem). This is only available in the case of linear kernel.\ncoef_ is readonly property derived from dual_coef_ and support_vectors_."
+                ,"intercept_ : array, shape = [1]\nConstants in decision function."
+            };
+            initOutputParams(OutDocs, Outvars, pManager);
         }
 
         /// <summary>
@@ -120,18 +127,17 @@ namespace ANT._04_SVM
 
             //Optional Data:
 
-            double C= 1.0;
-            string loss= "squared_hinge";
-            string penalty= "l1";
-            bool dual = true;
-            double tol= 0.00001;
-            string multi_class= "ovr" ;
-            bool fit_intercept= true;
-            double intercept_scaling= 1.0;
-            string class_weight= "auto";
-            int verbose= 0;
-            string random_state="None";
-            int max_iter= 1000;
+            double C = 1.0;
+            double epsilon=1.0;
+            string kernel = "rbf";
+            int degree= 3 ;
+            double gamma= 0.0;
+            double coef0= 0.0;
+            bool shrinking=true ;
+            double tol= 1e-3;
+            double cache_size= 200;
+            bool verbose= false;
+            int max_iter = -1;
 
             List<double> predicTData = new List<double>();
 
@@ -150,18 +156,17 @@ namespace ANT._04_SVM
             long ticks0 = DateTime.Now.Ticks;
             try
             {
-                DA.GetData(5, ref C);                   //0
-                DA.GetData(6, ref loss);                //1
-                DA.GetData(7, ref penalty);             //2
-                DA.GetData(8, ref dual);                //3
-                DA.GetData(9, ref tol);                 //4
-                DA.GetData(10, ref multi_class);        //5
-                DA.GetData(11, ref fit_intercept);      //6
-                DA.GetData(12, ref intercept_scaling);  //7
-                DA.GetData(13, ref class_weight);       //8
-                DA.GetData(14, ref verbose);            //9
-                DA.GetData(15, ref random_state);       //10
-                DA.GetData(16, ref max_iter);           //11
+                DA.GetData(5, ref C);                  
+                DA.GetData(6, ref epsilon);               
+                DA.GetData(7, ref kernel);
+                DA.GetData(8, ref degree);            
+                DA.GetData(9, ref gamma);              
+                DA.GetData(10, ref coef0);
+                DA.GetData(11, ref shrinking);      
+                DA.GetData(12, ref tol);     
+                DA.GetData(13, ref cache_size); 
+                DA.GetData(14, ref verbose);     
+                DA.GetData(15, ref max_iter);           
             }
             catch (Exception ex)
             {
@@ -183,16 +188,15 @@ namespace ANT._04_SVM
                 // Put inputData in one list of strings. 
                 List<string> dataInput = new List<string>(new string[] {
                 C.ToString(),
-                @"'"+loss+@"'",
-                @"'"+penalty+@"'",
-                dual==true?"True":"False",
+                epsilon.ToString(),
+                @"'"+kernel+@"'",
+                degree.ToString(),
+                gamma.ToString(),
+                coef0.ToString(),
+                shrinking==true?"True":"False",
                 tol.ToString(),
-                @"'"+multi_class+@"'",
-                fit_intercept==true?"True":"False",
-                intercept_scaling.ToString(),
-                @"'"+class_weight+@"'",
-                verbose.ToString(),
-                @"'"+random_state+@"'",
+                cache_size.ToString(),
+                verbose==true?"True":"False",
                 max_iter.ToString(),
             });
 
@@ -200,7 +204,7 @@ namespace ANT._04_SVM
                 string newString = helpFunctions.dataInput2Python(workingDir, predicTData);
 
                 // 04 Write the Python file in the working directory 
-                helpFunctions.PythonFile(defaultDir, dataFile, targetFile, workingDir, resultFile, newString, "True", workingDir + "logFile.txt", allResources._04_LinearSupportVectorClassifier, dataInput);
+                helpFunctions.PythonFile(defaultDir, dataFile, targetFile, workingDir, resultFile, newString, "True", workingDir + "logFile.txt", allResources._04_SupportVectorRegression, dataInput);
 
 
             }
@@ -225,25 +229,37 @@ namespace ANT._04_SVM
 
                 XmlNode res_node = doc.DocumentElement.SelectSingleNode("/result/prediction");
                 XmlNode score_node = doc.DocumentElement.SelectSingleNode("/result/score");
+                XmlNode support_node = doc.DocumentElement.SelectSingleNode("/result/support");
+                XmlNode support_vectors_node = doc.DocumentElement.SelectSingleNode("/result/support_vectors");
+                XmlNode dual_coef_node = doc.DocumentElement.SelectSingleNode("/result/dual_coef");
                 XmlNode coeff_node = doc.DocumentElement.SelectSingleNode("/result/coef");
                 XmlNode intercept_node = doc.DocumentElement.SelectSingleNode("/result/intercept");
 
 
                 string res = res_node.InnerText;
                 string score = score_node.InnerText;
+                string support = support_node.InnerText;
+                string support_vectors = support_vectors_node.InnerText;
+                string dual_coef = dual_coef_node.InnerText;
                 string coeff = coeff_node.InnerText;
                 string intercept = intercept_node.InnerText;
+
+
 
                 //string res = System.IO.File.ReadAllText(workingDir + "result.txt");
                 res = res.Replace("[", "").Replace("]", "");
                 DA.SetData(1, res);
                 DA.SetData(2, score);
-                DA.SetData(7, coeff);
-                DA.SetData(8, intercept);
+                DA.SetData(3, support);
+                DA.SetData(4, support_vectors);
+                DA.SetData(5, dual_coef);
+                DA.SetData(6, coeff);
+                DA.SetData(7, intercept);
 
                 long ticks1 = DateTime.Now.Ticks;
                 double timeElaspsed = ((double)ticks1 - (double)ticks0) / 10000000;
                 Logs += "Success !! in : " + timeElaspsed + " Seconds\n ";
+
 
             }
             catch (Exception e)
@@ -319,7 +335,6 @@ namespace ANT._04_SVM
         }
 
 
-
         /// <summary>
         /// Provides an Icon for the component.
         /// </summary>
@@ -328,7 +343,7 @@ namespace ANT._04_SVM
             get
             {
                 //You can add image files to your project resources and access them like this:
-                return allResources.LinearSVC;
+                return allResources._04_SVR;
             }
         }
 
@@ -337,7 +352,7 @@ namespace ANT._04_SVM
         /// </summary>
         public override Guid ComponentGuid
         {
-            get { return new Guid("{13b99642-de82-4e5f-bd67-46590bb63d1f}"); }
+            get { return new Guid("{0a60f955-c8b5-4963-9457-33981ca45128}"); }
         }
     }
 }

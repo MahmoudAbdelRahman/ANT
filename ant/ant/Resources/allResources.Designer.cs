@@ -487,6 +487,40 @@ namespace ANT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 
+        ///# -*- coding: utf-8 -*-
+        ///&quot;&quot;&quot;
+        ///Created on Fri Jun 09 18:45:04 2017
+        ///SupportVectorRegression 
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
+        ///
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
+        ///
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modificatio [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string _04_SupportVectorRegression {
+            get {
+                return ResourceManager.GetString("_04_SupportVectorRegression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _04_SVR {
+            get {
+                object obj = ResourceManager.GetObject("_04_SVR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
         ///&quot;&quot;&quot;
         ///Created on Tue Apr 04 05:14:23 2017

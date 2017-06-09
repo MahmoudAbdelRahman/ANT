@@ -43,6 +43,7 @@ namespace ANT
     /// </summary>
     public class antComponent : GH_Component
     {
+        
         bool processhasexit = false;
         List<string> folders = new List<string>(new string[] { "init", "_02_datasets", "_03_LinearModel", "_04_SVM", "_05_SGD", "_06_NearestNeighbors"});
         string MainDirectory = "C:\\";
@@ -185,6 +186,7 @@ namespace ANT
             get { return new Guid("{8feb36d4-8bbd-407c-937d-5fc8124d68ad}"); }
         }
 
-        
+
+
     }
 }

@@ -454,6 +454,25 @@ namespace ANT.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _04_LinearSupportVectorRegression_icon {
+            get {
+                object obj = ResourceManager.GetObject("_04_LinearSupportVectorRegression_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # -*- coding: utf-8 -*-â€¨&quot;&quot;&quot;â€¨Created on 12-6-2017â€¨_04_LinearSupportVectorRegression â€¨ â€¨@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;â€¨under BSD simplified Licenceâ€¨[ANT] A machine learning plugin for Rhino\Grasshopper â€¨    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD Licenseâ€¨â€¨    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;â€¨    All rights reserved.â€¨â€¨    Redistribution and use in source and binary forms, with or withoutâ€¨    modi [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string _04_LinearSupportVectorRegressionPy {
+            get {
+                return ResourceManager.GetString("_04_LinearSupportVectorRegressionPy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
         ///&quot;&quot;&quot;
         ///Created on Tue Apr 04 05:14:23 2017
@@ -479,10 +498,76 @@ namespace ANT.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _04_NuSupportVectorRegression_icon {
+            get {
+                object obj = ResourceManager.GetObject("_04_NuSupportVectorRegression_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
+        ///&quot;&quot;&quot;
+        ///Created on 13-6-2017
+        ///_04_NuSupportVectorRegression 
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
+        ///
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
+        ///
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modification, are perm [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string _04_NuSupportVectorRegressionpy {
+            get {
+                return ResourceManager.GetString("_04_NuSupportVectorRegressionpy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _04_NuSVC {
             get {
                 object obj = ResourceManager.GetObject("_04_NuSVC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _04_OneClassSupportVectorMachine_icon {
+            get {
+                object obj = ResourceManager.GetObject("_04_OneClassSupportVectorMachine_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # -*- coding: utf-8 -*-
+        ///&quot;&quot;&quot;
+        ///Created on 13-6-2017
+        ///_04_OneClassSupportVectorMachine 
+        /// 
+        ///@author: Mahmoud M. Abderlrahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///under BSD simplified Licence
+        ///[ANT] A machine learning plugin for Rhino\Grasshopper 
+        ///    Started by Mahmoud Abdelrahman [Mahmoud Ouf] under BSD License
+        ///
+        ///    Copyright (c) 2017, Mahmoud AbdelRahman &lt;arch.mahmoud.ouf111@gmail.com&gt;
+        ///    All rights reserved.
+        ///
+        ///    Redistribution and use in source and binary forms, with or without
+        ///    modification, are p [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string _04_OneClassSupportVectorMachinepy {
+            get {
+                return ResourceManager.GetString("_04_OneClassSupportVectorMachinepy", resourceCulture);
             }
         }
         
@@ -881,6 +966,16 @@ namespace ANT.Resources {
         public static string supportVectorClassifier {
             get {
                 return ResourceManager.GetString("supportVectorClassifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap svc {
+            get {
+                object obj = ResourceManager.GetObject("svc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

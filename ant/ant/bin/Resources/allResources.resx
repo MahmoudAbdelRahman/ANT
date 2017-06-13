@@ -262,4 +262,25 @@
   <data name="_04_SVR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>icons\04_svr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_04_LinearSupportVectorRegressionPy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>_04_svm\_04_linearsupportvectorregressionpy.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="_04_NuSupportVectorRegressionpy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>_04_svm\_04_nusupportvectorregressionpy.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="_04_OneClassSupportVectorMachinepy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>_04_svm\_04_oneclasssupportvectormachinepy.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="svc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>icons\svc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_04_LinearSupportVectorRegression_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>icons\_04_linearsupportvectorregression_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_04_NuSupportVectorRegression_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>icons\_04_nusupportvectorregression_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_04_OneClassSupportVectorMachine_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>icons\_04_oneclasssupportvectormachine_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -67,7 +67,7 @@ namespace ANT
                 System.IO.Directory.CreateDirectory(workingDir);
             }
             tryexcept(workingDir + "doAllWork.py", predictData);
-            System.IO.File.AppendAllText(workingDir + "doAllWork.py", thisFile);
+            System.IO.File.AppendAllText(workingDir + "doAllWork.py", thisFile,Encoding.UTF8);
 
             return workingDir + "doAllWork.py";
         }

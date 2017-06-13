@@ -73,7 +73,10 @@
     <Compile Include="03_LinearModels\_03_LogisticRegression.cs" />
     <Compile Include="03_LinearModels\_03_OrthogonalMatchingPursuit.cs" />
     <Compile Include="04_SVM\_04_LinearSupportVectorClassification.cs" />
+    <Compile Include="04_SVM\_04_LinearSupportVectorRegression.cs" />
     <Compile Include="04_SVM\_04_NuSupportVectorClassification.cs" />
+    <Compile Include="04_SVM\_04_NuSupportVectorRegression.cs" />
+    <Compile Include="04_SVM\_04_OneClassSupportVectorMachine.cs" />
     <Compile Include="04_SVM\_04_SupportVectorRegression.cs" />
     <Compile Include="04_SVM\_04_ٍSupportVectorClassifier.cs" />
     <Compile Include="05_SGD\_03_StochasticGradientDescentClassifier.cs" />
@@ -120,9 +123,18 @@
     <Content Include="Resources\icons\04_NuSVC.png" />
     <Content Include="Resources\icons\04_SVR.png" />
     <Content Include="Resources\icons\LinearSVC.png" />
+    <Content Include="Resources\icons\svc.png" />
+    <Content Include="Resources\icons\_04_LinearSupportVectorRegression_icon.png" />
+    <Content Include="Resources\icons\_04_NuSupportVectorRegression_icon.png" />
+    <Content Include="Resources\icons\_04_OneClassSupportVectorMachine_icon.png" />
     <Content Include="Resources\_04_SVM\supportVectorClassifier.txt" />
     <Content Include="Resources\_04_SVM\_04_LinearSupportVectorClassifier.txt" />
+    <Content Include="Resources\_04_SVM\_04_LinearSupportVectorRegressionPy.txt" />
     <Content Include="Resources\_04_SVM\_04_NuSupportVectorClassification.txt" />
+    <Resource Include="Resources\_04_SVM\_04_NuSupportVectorRegressionpy.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Resources\_04_SVM\_04_OneClassSupportVectorMachinepy.txt" />
     <Content Include="Resources\_04_SVM\_04_SupportVectorRegression.txt" />
     <None Include="Resources\ExcelDataset.txt" />
     <Content Include="Resources\datasets\ExcelDataset.txt" />

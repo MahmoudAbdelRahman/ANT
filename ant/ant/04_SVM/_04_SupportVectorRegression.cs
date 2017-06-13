@@ -55,6 +55,11 @@ namespace ANT._04_SVM
 
         }
 
+        public override Grasshopper.Kernel.GH_Exposure Exposure
+        {
+            get { return GH_Exposure.secondary; }
+        }
+
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>

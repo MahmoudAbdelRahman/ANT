@@ -35,6 +35,11 @@ namespace ANT._04_SVM
 
         }
 
+        public override Grasshopper.Kernel.GH_Exposure Exposure
+        {
+            get { return GH_Exposure.primary; }
+        }
+
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
@@ -229,7 +234,7 @@ namespace ANT._04_SVM
             get
             {
                 //You can add image files to your project resources and access them like this:
-                return Resources.allResources._03_SupportVectorClassify;
+                return Resources.allResources.svc;
             }
         }
 

@@ -23,7 +23,7 @@ On the other hand, this plugin (in the present time) has been tested in Windows 
 
 2. Add new CSV dataset component, Open your csv file using Openfile component, then, link data and targets from csv dataset outpust into any Machine learning component for instance: linear regression.
 
-3. specify the working directore, for example "E:\ant\plugin\example\" (don't forget the backslash at the end of the directory path". 
+3. specify the working directore, for example "E:\ant\plugin\example\\" (don't forget the backslash at the end of the directory path". 
 
 4. add prediction data by using merge component, **(note: the total number of merged values must be equal to the number of features)**
 

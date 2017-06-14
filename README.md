@@ -25,12 +25,17 @@ On the other hand, this plugin (in the present time) has been tested in Windows 
 
 3. specify the working directore, for example "E:\ant\plugin\example**\**" (don't forget the backslash at the end of the directory path". 
 
-4. add prediction data by using merge component, (note: the total number of merged values must be equal to the number of features)
+4. add prediction data by using merge component, **(note: the total number of merged values must be equal to the number of features)**
 
 5. start fitting your data ( use boolean toggle component) .. Thats. all.
 
 
 ![csvcomponent](https://user-images.githubusercontent.com/6969514/27114267-aac9b728-50c2-11e7-9d73-9cc7ca16eb19.jpg)
+
+The same steps holds for Excel dataset:
+
+![excel_dataset](https://user-images.githubusercontent.com/6969514/27114445-080d49b2-50c4-11e7-9c44-145f18129bde.jpg)
+
 
 ## Licence
 Copyright (c) 2017, Mahmoud AbdelRahman <arch.mahmoud.ouf111@gmail.com> 

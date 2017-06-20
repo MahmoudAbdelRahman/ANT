@@ -17,7 +17,7 @@ After installing Python, numPy, SciPy, matplotlib and scikit-learn, Open grassho
 
 On the other hand, this plugin (in the present time) has been tested in Windows environment with python 2.7. If you are using earlier of latter versions, we highly recommend that you kindly submit any bug appears. 
 
-## How to ANT ?
+## How to use ANT ?
 
 1. Create your own data CSV file as shown in the figure below, the first line consists of the features' labels, while the last column is the targets and each line represents a data instance used for trainine. 
 
@@ -32,7 +32,7 @@ On the other hand, this plugin (in the present time) has been tested in Windows 
 
 ![csvcomponent](https://user-images.githubusercontent.com/6969514/27114267-aac9b728-50c2-11e7-9d73-9cc7ca16eb19.jpg)
 
-The same steps holds for Excel dataset:
+The same steps hold for Excel dataset:
 
 ![excel_dataset](https://user-images.githubusercontent.com/6969514/27114445-080d49b2-50c4-11e7-9c44-145f18129bde.jpg)
 

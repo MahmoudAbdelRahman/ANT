@@ -7,7 +7,7 @@ This project aims to develop a machine learning plugin for Rhino\Grasshopper by 
 
 ## Instructions for installing
 
-![Watch the video](https://youtu.be/3rqW-VltR_Q)
+[Watch the video](https://youtu.be/3rqW-VltR_Q)
 
 This plugin is based on Python and scikit-learn, while scikit-learn depends on Numpy and scipy modules. Thus, it is important to ensure having these tools installed in your system and working properly.
 To install scikit-learn on your machine, you could follow instructions on this link: [installing scikit-learn](http://scikit-learn.org/stable/install.html).

@@ -1,0 +1,29 @@
+﻿directory = "##directory##"
+f = open(directory+"errorlog.txt", 'w')
+
+try:
+	from sklearn.datasets import load_digits
+except Exception(e):
+	f.write(e +"\n")
+
+f.close()
+f = open(directory + "digitslog.txt", 'w')
+
+def write_data(directory, filename, data):
+    newf = open(directory+filename, 'w')
+    newf.write(data)
+    newf.close()
+
+import pickle
+    
+digits = load_digits()
+
+write_data(directory,"data.txt", pickle.dumps(digits.data))
+write_data(directory, "targets.txt", pickle.dumps(digits.target))
+
+write_data(directory,"digitsdata_r.txt", str(digits.data))
+write_data(directory, "digitstarget_r.txt", str(digits.target))
+
+
+f.write(digits['DESCR'])
+f.close()

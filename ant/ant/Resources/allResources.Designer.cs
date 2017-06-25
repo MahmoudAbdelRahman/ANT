@@ -730,6 +730,46 @@ namespace ANT.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap digits {
+            get {
+                object obj = ResourceManager.GetObject("digits", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to directory = &quot;##directory##&quot;
+        ///f = open(directory+&quot;errorlog.txt&quot;, &apos;w&apos;)
+        ///
+        ///try:
+        ///	from sklearn.datasets import load_digits
+        ///except Exception(e):
+        ///	f.write(e +&quot;\n&quot;)
+        ///
+        ///f.close()
+        ///f = open(directory + &quot;digitsData.txt&quot;, &apos;w&apos;)
+        ///
+        ///def write_data(directory, filename, data):
+        ///    newf = open(directory+filename, &apos;w&apos;)
+        ///    newf.write(data)
+        ///    newf.close()
+        ///
+        ///import pickle
+        ///    
+        ///digits = load_digits()
+        ///
+        ///write_data(directory,&quot;data.txt&quot;, pickle.dumps(digits.data))
+        ///write_data(directory, &quot;targets.txt&quot;, pickle.dumps(digi [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string digitsDataset {
+            get {
+                return ResourceManager.GetString("digitsDataset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap exceldataset {
             get {
                 object obj = ResourceManager.GetObject("exceldataset", resourceCulture);
@@ -912,6 +952,16 @@ namespace ANT.Resources {
         public static System.Drawing.Bitmap LinearSVC {
             get {
                 object obj = ResourceManager.GetObject("LinearSVC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap linSVC {
+            get {
+                object obj = ResourceManager.GetObject("linSVC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

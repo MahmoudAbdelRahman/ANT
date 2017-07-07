@@ -46,7 +46,8 @@ namespace ANT._04_SVM
             this.Description = "";
 
             //initiating the process which runs the Python file. 
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.EnableRaisingEvents = true;
             process2.StartInfo.CreateNoWindow = true;
             process2.StartInfo.UseShellExecute = true;

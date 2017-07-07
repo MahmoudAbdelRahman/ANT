@@ -67,7 +67,7 @@ namespace ANT._04_SVM
         /// Initializes a new instance of the _04_OneClassSupportVectorMachine class.
         /// </summary>
         public _04_OneClassSupportVectorMachine()
-            : base("_04_OneClassSupportVectorMachine", "SVR",
+            : base("_04_OneClassSupportVectorMachine", "OneClassSVC",
                 "",
                 "ANT", "4|SVM")
         {
@@ -75,7 +75,8 @@ namespace ANT._04_SVM
             this.Description = "";
 
             //initiating the process which runs the Python file. 
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.EnableRaisingEvents = true;
             process2.StartInfo.CreateNoWindow = true;
             process2.StartInfo.UseShellExecute = true;

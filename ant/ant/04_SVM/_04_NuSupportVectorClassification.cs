@@ -70,7 +70,8 @@ namespace ANT._04_SVM
             this.Description = "Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better (to large numbers of samples).";
 
             //initiating the process which runs the Python file. 
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.EnableRaisingEvents = true;
             process2.StartInfo.CreateNoWindow = true;
             process2.StartInfo.UseShellExecute = true;

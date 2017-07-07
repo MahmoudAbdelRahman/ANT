@@ -54,7 +54,8 @@ namespace ANT._03_LinearModels
             this.Message = "Linear Regression\n Ordinary Least Squares";
             this.Description = "LinearRegression fits a linear model with coefficients w = (w_1, ..., w_p) to minimize the residual sum of squares between the observed responses in the dataset, and the responses predicted by the linear approximation";
 
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.EnableRaisingEvents = true;
             process2.StartInfo.CreateNoWindow = true;
             process2.StartInfo.UseShellExecute = true;

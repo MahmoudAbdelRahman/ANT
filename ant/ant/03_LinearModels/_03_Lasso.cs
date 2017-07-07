@@ -52,7 +52,8 @@ namespace ANT._03_LinearModels
                 "ANT", "3|Linear Model")
         {
             this.Message = "Lasso ";
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.EnableRaisingEvents = true;
             process2.StartInfo.CreateNoWindow = true;
             process2.StartInfo.UseShellExecute = true;

@@ -46,14 +46,15 @@ namespace ANT._03_LinearModels
         /// Initializes a new instance of the _03_BayesianRegression class.
         /// </summary>
         public _03_BayesianRegression()
-            : base("_03_BayesianRegression", "Nickname",
+            : base("_03_BayesianRegression", "BayesianRegression",
                 "Description",
                 "ANT", "3|Linear Model")
         {
             this.Description = "Bayesian regression techniques can be used to include regularization parameters in the estimation procedure: the regularization parameter is not set in a hard sense but tuned to the data at hand.";
             this.Message = "Bayesian Regression";
 
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.EnableRaisingEvents = true;
             process2.StartInfo.CreateNoWindow = true;
             process2.StartInfo.UseShellExecute = true;

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="01_DataSets\_0_BostonDataset.cs" />
+    <Compile Include="01_DataSets\_0_DigitsDataset.cs" />
     <Compile Include="01_DataSets\_0_IrisDataset.cs" />
     <Compile Include="03_LinearModels\_03_BayesianRegression.cs" />
     <Compile Include="03_LinearModels\_03_ElasticNet.cs" />
@@ -120,9 +121,12 @@
   <ItemGroup>
     <Content Include="Resources\datasets\boston_dataset.txt" />
     <Content Include="Resources\datasets\csvDataset.txt" />
+    <Content Include="Resources\datasets\digitsDataset.txt" />
     <Content Include="Resources\icons\04_NuSVC.png" />
     <Content Include="Resources\icons\04_SVR.png" />
+    <Content Include="Resources\icons\digits.png" />
     <Content Include="Resources\icons\LinearSVC.png" />
+    <Content Include="Resources\icons\linSVC.png" />
     <Content Include="Resources\icons\svc.png" />
     <Content Include="Resources\icons\_04_LinearSupportVectorRegression_icon.png" />
     <Content Include="Resources\icons\_04_NuSupportVectorRegression_icon.png" />

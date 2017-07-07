@@ -129,11 +129,14 @@ namespace ANT
         {
             bool data = false;
             System.Diagnostics.Process process = new System.Diagnostics.Process();
-            process.StartInfo.FileName = "init.py";
-            process.StartInfo.WorkingDirectory = "C:\\ant\\init\\";
+            process.StartInfo.FileName = "python.exe";
+            process.StartInfo.Arguments = "init.py";
+            //process.StartInfo.WorkingDirectory = "";
             process.EnableRaisingEvents = true;
+
             process.Exited += process_Exited;
 
+            
             if(!DA.GetData(0, ref data))
             {
                 return;

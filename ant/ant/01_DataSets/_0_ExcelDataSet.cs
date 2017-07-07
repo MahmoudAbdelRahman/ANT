@@ -109,7 +109,8 @@ namespace ANT
         {
             string defaultDir = "C:\\\\ant\\\\init\\\\ExcelDataset\\\\";
 
-            process2.StartInfo.FileName = "doAllWork.py";
+            process2.StartInfo.FileName = "python.exe";
+            process2.StartInfo.Arguments = "doAllWork.py";
             process2.StartInfo.WorkingDirectory = @workingDir;
             process2.EnableRaisingEvents = true;
             process2.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;

@@ -90,7 +90,8 @@ namespace ANT._01_DataSets
             string workingDir2 = workingDir.Replace("\\", "\\\\");
 
             System.Diagnostics.Process process = new System.Diagnostics.Process();
-            process.StartInfo.FileName = "working.py";
+            process.StartInfo.FileName = "python.exe";
+            process.StartInfo.Arguments = "working.py";
             process.StartInfo.WorkingDirectory = workingDir;
             process.EnableRaisingEvents = true;
             process.Exited += process_Exited;
@@ -101,7 +102,7 @@ namespace ANT._01_DataSets
             string file = Resources.allResources.irisdataset;
             file = file.Replace("##directory##", workingDir2);
 
-            System.IO.File.AppendAllText(@workingDir+"working.py", file);
+            System.IO.File.WriteAllText(@workingDir+"working.py", file);
 
             process.Start();
             while (!processhasexit)

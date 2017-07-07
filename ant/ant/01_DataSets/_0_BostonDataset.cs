@@ -70,7 +70,8 @@ namespace ANT._01_DataSets
             if (!loadBoston) { return; }
 
             System.Diagnostics.Process process = new System.Diagnostics.Process();
-            process.StartInfo.FileName = "boston_dataset.py";
+            process.StartInfo.FileName = "python.exe";
+            process.StartInfo.Arguments = "boston_dataset.py";
             process.StartInfo.WorkingDirectory = workingDir;
             process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             process.EnableRaisingEvents = true;
